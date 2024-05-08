@@ -1,0 +1,67 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  /* Add your CSS styles here */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  header {
+      background-color:#4169E1 ;
+      color: white;
+      text-align: center;
+      padding: 1em;
+  }
+  
+  footer {
+            background-color: #4169E1 ;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+        }
+      </style>
+      
+    </head>
+    <body>
+    
+    <header>
+        <h1>Splash</h1>
+    </header>      
+
+  
+{% block content %}
+{% for d in category %}
+<div class="card text-center mx-5 my-3" style="width: 18rem;display: inline-block;">
+  <br>
+  <img src="{{d.category_image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{d.category_name}}</h5>
+    <p class="card-text"></p>
+   <div class="container text-center">
+    <a href="{% url 'services' %}"><button type="submit"class="btn btn-primary">Select</button></a>
+    </div>
+    
+  </div>
+</div>
+<style>
+  .card img{
+    width: 150px;
+    height: 150px;
+  }
+</style>
+
+{% endfor %}
+{% endblock %}
+
+
+<footer>
+  <p>&copy; 2023 Splash. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

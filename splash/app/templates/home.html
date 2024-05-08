@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<img class="image" src="{% static 'cot.jpg' %}">
+<img class="image" src="{% static 'blue.jpg' %}">
+<style>
+    .image{
+        height: 750px;
+        width: 900px;
+        padding: 3%;
+    }
+</style>
+
+
+
+{% endblock %}

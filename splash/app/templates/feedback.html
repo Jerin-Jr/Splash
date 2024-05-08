@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="text-center">Comment your feedback!</h1>
+<hr>
+<div class="container w-25 text-center my-5 bg-info">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form|crispy }}
+        <br>
+        <button type="submit" class="btn  btn-primary">Submit</button>
+        <hr>
+    </form>
+</div>
+{% endblock %}
